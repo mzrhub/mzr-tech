@@ -5,33 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   
   <!-- SEO Meta Tags -->
-  <title>MZR Tech – Best Computer Courses in Pakistan | Digital Marketing & Web Development</title>
-  <meta name="title" content="MZR Tech – Best Computer Courses in Pakistan | Digital Marketing & Web Development">
-  <meta name="description" content="Join MZR Tech and learn high-income skills like Digital Marketing, Web Development, and Expert Computer Courses. Online & Physical classes available in Pakistan. Limited seats – Register now!">
-  <meta name="keywords" content="computer courses in pakistan, online computer courses pakistan, digital marketing course pakistan, web development course pakistan, best IT courses in pakistan, learn freelancing pakistan, online earning courses pakistan, short courses pakistan, computer academy near me, digital skills training pakistan, web development training pakistan, online classes pakistan students, freelancing courses pakistan, high income skills pakistan, mzr tech courses">
+  <title>MZR Tech - Digital Marketing, Web Development & IT Courses in Pakistan</title>
+  <meta name="description" content="MZR Tech offers professional web development, digital marketing services, and IT courses including Expert Computer Course, Web Development, and Digital Marketing. Grow your business with us.">
+  <meta name="keywords" content="MZR Tech, digital marketing Pakistan, web development services, WordPress development, Facebook ads, Google ads, IT courses Pakistan, computer course, online earning Pakistan">
   <meta name="author" content="MZR Tech">
   <meta name="robots" content="index, follow">
-  <meta name="language" content="English">
-  <meta name="revisit-after" content="7 days">
   
-  <!-- Open Graph / Social Media Meta Tags -->
-  <meta property="og:title" content="MZR Tech – Best Computer Courses in Pakistan">
-  <meta property="og:description" content="Learn high-income skills like Digital Marketing, Web Development & Computer Courses. Online & Physical classes available.">
+  <!-- Open Graph / Social Media -->
+  <meta property="og:title" content="MZR Tech - Your Vision, Our Innovation">
+  <meta property="og:description" content="We provide digital marketing, web development, and professional IT courses to boost your career and business.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://mzrtech.com">
-  <meta property="og:image" content="https://mzrtech.com/og-image.jpg">
-  
-  <!-- Canonical URL -->
-  <link rel="canonical" href="https://mzrtech.com">
+  <meta property="og:image" content="https://via.placeholder.com/1200x630?text=MZR+Tech">
+  <meta property="og:url" content="https://www.mzrtech.com">
   
   <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
+  <link rel="icon" type="image/x-icon" href="#">
   
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
-  
-  <!-- Font Awesome for Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <!-- Google Fonts + Font Awesome 6 (icons) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   
   <style>
     * {
@@ -42,676 +34,620 @@
 
     body {
       font-family: 'Inter', sans-serif;
-      background: #ffffff;
-      color: #1e293b;
-      line-height: 1.5;
+      background-color: #000000;
+      color: #ffffff;
       scroll-behavior: smooth;
+      line-height: 1.5;
     }
 
+    /* Color Theme: Orange (#f97316) → Red (#ef4444) Gradient */
     :root {
       --orange: #f97316;
-      --red: #dc2626;
-      --orange-light: #fff4ed;
-      --shadow-sm: 0 4px 6px -2px rgba(0,0,0,0.05);
-      --shadow-md: 0 10px 25px -5px rgba(0,0,0,0.08);
-      --shadow-lg: 0 20px 35px -12px rgba(0,0,0,0.12);
+      --red: #ef4444;
+      --black: #000000;
+      --black-light: #111111;
+      --gray-dark: #1a1a1a;
+      --white: #ffffff;
+      --gradient-primary: linear-gradient(135deg, var(--orange), var(--red));
+      --gradient-hover: linear-gradient(135deg, #ea580c, #dc2626);
+      --shadow-card: 0 20px 35px -12px rgba(0, 0, 0, 0.6);
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
     }
 
     .container {
       max-width: 1280px;
       margin: 0 auto;
-      padding: 0 32px;
+      padding: 0 24px;
     }
 
-    /* Header */
-    .header {
-      background: white;
-      border-bottom: 2px solid #ffede3;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      backdrop-filter: blur(8px);
-      background: rgba(255,255,255,0.96);
-    }
+    /* Header / Nav */
     .navbar {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 18px 0;
       flex-wrap: wrap;
-      gap: 16px;
+      padding: 20px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     }
-    .logo-container {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      text-decoration: none;
-    }
-    .logo-img {
-      width: 45px;
-      height: 45px;
-      background: linear-gradient(135deg, #f97316, #dc2626);
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+
+    .logo h2 {
       font-size: 1.8rem;
       font-weight: 800;
-      color: white;
-      box-shadow: 0 4px 10px rgba(249,115,22,0.3);
-    }
-    .logo-text {
-      font-size: 1.6rem;
-      font-weight: 800;
-      background: linear-gradient(135deg, #f97316, #dc2626);
-      background-clip: text;
+      background: var(--gradient-primary);
       -webkit-background-clip: text;
+      background-clip: text;
       color: transparent;
+      letter-spacing: -0.5px;
     }
+
     .nav-links {
       display: flex;
-      gap: 32px;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-    .nav-links a {
-      text-decoration: none;
-      font-weight: 600;
-      color: #334155;
-      transition: 0.2s;
-    }
-    .nav-links a:hover {
-      color: #f97316;
-    }
-
-    /* Hero Section */
-    .hero {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 48px;
-      padding: 60px 0 80px 0;
-      flex-wrap: wrap;
-    }
-    .hero-content {
-      flex: 1.2;
-    }
-    .hero-badge {
-      background: rgba(249, 115, 22, 0.1);
-      display: inline-block;
-      padding: 6px 18px;
-      border-radius: 50px;
-      font-weight: 600;
-      font-size: 0.85rem;
-      color: #dc2626;
-      margin-bottom: 24px;
-      border-left: 3px solid #f97316;
-    }
-    .hero h1 {
-      font-size: 3.5rem;
-      font-weight: 800;
-      line-height: 1.2;
-      letter-spacing: -0.02em;
-      background: linear-gradient(135deg, #1e293b, #f97316);
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
-      margin-bottom: 20px;
-    }
-    .hero-sub {
-      font-size: 1.3rem;
-      color: #475569;
-      margin-bottom: 32px;
+      gap: 2rem;
       font-weight: 500;
     }
-    .hero-buttons {
-      display: flex;
-      gap: 18px;
-      flex-wrap: wrap;
-    }
-    .hero-image {
-      flex: 1;
-      background: linear-gradient(145deg, #fff5eb, #fff0e6);
-      border-radius: 48px;
-      padding: 20px;
-      text-align: center;
-    }
-    .hero-image svg {
-      width: 100%;
-      max-width: 480px;
-      height: auto;
+
+    .nav-links a {
+      transition: color 0.2s;
     }
 
+    .nav-links a:hover {
+      color: var(--orange);
+    }
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+}
     /* Buttons */
     .btn-primary {
-      background: linear-gradient(95deg, #f97316, #dc2626);
-      border: none;
+      background: var(--gradient-primary);
+      color: white;
       padding: 12px 28px;
       border-radius: 40px;
-      font-weight: 700;
-      font-size: 0.95rem;
-      color: white;
+      font-weight: 600;
+      border: none;
       cursor: pointer;
-      transition: transform 0.2s ease, box-shadow 0.2s;
-      box-shadow: 0 4px 8px rgba(249, 115, 22, 0.2);
+      transition: transform 0.2s, box-shadow 0.2s;
       display: inline-block;
       text-align: center;
-      text-decoration: none;
+      box-shadow: 0 4px 12px rgba(249,115,22,0.3);
     }
+
     .btn-primary:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 12px 20px -8px rgba(220, 38, 38, 0.4);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 20px rgba(239,68,68,0.4);
+      background: var(--gradient-hover);
     }
+
     .btn-outline {
       background: transparent;
-      border: 2px solid #f97316;
-      padding: 10px 28px;
+      border: 1.5px solid var(--orange);
+      color: white;
+      padding: 12px 28px;
       border-radius: 40px;
-      font-weight: 700;
-      font-size: 0.95rem;
-      color: #f97316;
-      cursor: pointer;
-      transition: all 0.2s;
-      text-decoration: none;
-      display: inline-block;
-    }
-    .btn-outline:hover {
-      background: #f97316;
-      color: white;
-      border-color: #f97316;
-    }
-
-    /* Section Titles */
-    .section-title {
-      font-size: 2.4rem;
-      font-weight: 800;
-      margin-bottom: 48px;
-      text-align: center;
-    }
-    .section-title span {
-      background: linear-gradient(135deg, #f97316, #dc2626);
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
-    }
-
-    /* Course Cards */
-    .cards-grid {
-      display: flex;
-      gap: 32px;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-    .course-card {
-      background: white;
-      border-radius: 28px;
-      padding: 32px 28px;
-      flex: 1;
-      min-width: 280px;
-      box-shadow: 0 15px 35px -12px rgba(0, 0, 0, 0.07);
-      transition: all 0.3s;
-      border: 1px solid #ffede3;
-      text-align: center;
-      scroll-margin-top: 100px;
-    }
-    .course-card:hover {
-      transform: translateY(-8px);
-      border-color: #f97316;
-      box-shadow: 0 25px 35px -16px rgba(249, 115, 22, 0.2);
-    }
-    .course-icon {
-      font-size: 2.8rem;
-      margin-bottom: 20px;
-    }
-    .course-card h3 {
-      font-size: 1.5rem;
-      font-weight: 700;
-      margin-bottom: 12px;
-    }
-    .course-card p {
-      color: #4b5563;
-      margin-bottom: 16px;
-    }
-    .price-tag {
-      font-size: 1.3rem;
-      font-weight: 800;
-      margin: 12px 0;
-    }
-
-    /* Curriculum Lists */
-    .curriculum-list {
-      text-align: left;
-      margin: 16px 0;
-      padding-left: 20px;
-    }
-    .curriculum-list li {
-      padding: 6px 0;
-      color: #475569;
-      font-size: 0.85rem;
-      list-style: none;
-    }
-    .course-badge {
-      display: inline-block;
-      background: #fee2e2;
-      color: #dc2626;
-      font-size: 0.7rem;
-      padding: 4px 12px;
-      border-radius: 60px;
-      margin-bottom: 12px;
-    }
-    .demo-btn {
-      background: transparent;
-      border: 2px solid #f97316;
-      color: #f97316;
-      padding: 8px 18px;
-      border-radius: 30px;
       font-weight: 600;
-      cursor: pointer;
-      transition: 0.2s;
-      margin-right: 8px;
-    }
-    .demo-btn:hover {
-      background: #f97316;
-      color: white;
+      transition: all 0.2s;
     }
 
-    /* Fee Section */
-    .fee-card {
-      max-width: 700px;
-      margin: 0 auto;
-      background: #0A0A0A;
-      border-radius: 64px;
-      padding: 48px 56px;
-      text-align: center;
-      border: 1px solid #ffd9c4;
+    .btn-outline:hover {
+      background: rgba(249,115,22,0.1);
+      border-color: var(--red);
+      transform: translateY(-2px);
     }
-    .fee-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      flex-wrap: wrap;
-      gap: 20px;
-      margin-bottom: 28px;
+
+    /* Hero */
+    .hero {
+      padding: 70px 0 80px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 3.8rem;
+      font-weight: 800;
+      line-height: 1.2;
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin-bottom: 20px;
+      letter-spacing: -1px;
+    }
+
+    .hero .subhead {
       font-size: 1.4rem;
       font-weight: 600;
-      color: white;
-    }
-    .fee-amount {
-      font-size: 2rem;
-      font-weight: 800;
-      background: linear-gradient(135deg, #F97316, #DC2626);
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
-    }
-    .limited {
-      background: rgba(220,38,38,0.15);
-      display: inline-block;
-      padding: 8px 24px;
-      border-radius: 40px;
-      font-weight: 600;
-      color: #dc2626;
-      animation: softBlink 1.2s infinite;
-    }
-    @keyframes softBlink {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.7; }
+      color: #facc15;
+      margin-bottom: 20px;
     }
 
-    /* Features Grid */
-    .features-grid {
+    .hero p {
+      max-width: 700px;
+      margin: 0 auto 32px;
+      font-size: 1.1rem;
+      color: #cccccc;
+    }
+
+    .hero-buttons {
       display: flex;
-      gap: 28px;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* Section styling */
+    section {
+      padding: 80px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 20px;
+      text-align: center;
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .section-sub {
+      text-align: center;
+      color: #bcbcbc;
+      max-width: 700px;
+      margin: 0 auto 50px;
+      font-size: 1.1rem;
+    }
+
+    /* About grid */
+    .about-grid {
+      display: flex;
+      gap: 40px;
       flex-wrap: wrap;
       justify-content: center;
     }
-    .feature-item {
+
+    .about-card, .team-card {
+      background: var(--black-light);
+      padding: 30px;
+      border-radius: 28px;
       flex: 1;
-      min-width: 200px;
-      background: #fff;
-      border-radius: 32px;
-      padding: 32px 20px;
-      text-align: center;
-      border: 1px solid #fff0e8;
-      transition: 0.2s;
+      min-width: 260px;
+      transition: all 0.2s;
+      border: 1px solid rgba(249,115,22,0.2);
+      box-shadow: var(--shadow-card);
     }
-    .feature-item:hover {
-      border-color: #f97316;
-      transform: translateY(-5px);
+
+    .about-card h3, .team-card h3 {
+      font-size: 1.8rem;
+      margin-bottom: 16px;
+      color: var(--orange);
     }
-    .feature-icon {
-      font-size: 2.5rem;
-      margin-bottom: 20px;
-    }
-    .feature-item h4 {
-      font-size: 1.3rem;
-      font-weight: 700;
+
+    .team-card h4 {
+      color: #facc15;
       margin-bottom: 10px;
     }
 
-    /* Steps */
-    .steps {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 40px;
+    /* Features grid */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 30px;
       margin-top: 20px;
     }
-    .step {
-      background: white;
-      border-radius: 60px;
-      padding: 20px 32px;
-      min-width: 180px;
+
+    .feature-item {
+      background: rgba(20,20,20,0.8);
+      backdrop-filter: blur(2px);
+      padding: 28px 20px;
+      border-radius: 24px;
       text-align: center;
-      border: 1px solid #fbe9e1;
-    }
-    .step-num {
-      background: linear-gradient(135deg, #f97316, #dc2626);
-      width: 48px;
-      height: 48px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 60px;
-      color: white;
-      font-weight: 800;
-      font-size: 1.5rem;
-      margin-bottom: 16px;
+      transition: all 0.3s;
+      border-bottom: 3px solid var(--orange);
     }
 
-    /* Contact */
-    .contact-wrapper {
+    .feature-item i {
+      font-size: 2.8rem;
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin-bottom: 18px;
+    }
+
+    .feature-item h4 {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+    }
+
+    .feature-item p {
+      color: #aaa;
+      font-size: 0.95rem;
+    }
+
+    /* services + courses cards */
+    .cards-wrapper {
       display: flex;
-      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+      margin: 40px 0 30px;
+    }
+
+    .service-card, .course-card {
+      background: #0f0f0f;
+      border-radius: 28px;
+      padding: 30px 24px;
+      flex: 1 1 280px;
+      transition: 0.2s;
+      border: 1px solid rgba(249,115,22,0.3);
+      box-shadow: 0 12px 20px -12px rgba(0,0,0,0.5);
+    }
+
+    .service-card:hover, .course-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--orange);
+    }
+
+    .service-card i, .course-card i {
+      font-size: 2.5rem;
+      color: var(--orange);
+      margin-bottom: 20px;
+    }
+
+    .service-card h3, .course-card h3 {
+      font-size: 1.6rem;
+      margin-bottom: 12px;
+    }
+
+    .btn-cta {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    /* contact section */
+    .contact-grid {
+      display: flex;
       flex-wrap: wrap;
       gap: 40px;
-      background: #fffaf5;
-      border-radius: 48px;
-      padding: 48px 40px;
+      justify-content: space-between;
     }
-    .whatsapp-btn {
-      background: #25D366;
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
+
+    .contact-info {
+      flex: 1;
+      background: #0c0c0c;
+      padding: 32px;
+      border-radius: 28px;
+    }
+.contact-info p {
+  margin: 20px 0;
+  display: flex;
+  align-items: flex-start; /* changed */
+  gap: 10px;
+  font-size: 1.05rem;
+  flex-wrap: wrap; /* IMPORTANT */
+  word-break: break-word; /* VERY IMPORTANT */
+}
+
+    .contact-info i {
+      font-size: 1.6rem;
+      color: var(--orange);
+      width: 32px;
+    }
+
+    .contact-form {
+      flex: 1.2;
+      background: #0c0c0c;
+      padding: 32px;
+      border-radius: 28px;
+    }
+
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      padding: 14px 18px;
+      margin-bottom: 20px;
+      background: #1e1e1e;
+      border: 1px solid #2c2c2c;
+      border-radius: 18px;
       color: white;
-      padding: 14px 32px;
-      border-radius: 60px;
+      font-family: inherit;
+      font-size: 1rem;
+    }
+
+    .contact-form textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .contact-form button {
+      width: 100%;
+      background: var(--gradient-primary);
+      border: none;
+      padding: 14px;
       font-weight: bold;
-      text-decoration: none;
-      margin-top: 12px;
+      font-size: 1rem;
+      border-radius: 40px;
+      color: white;
+      cursor: pointer;
+      transition: 0.2s;
     }
 
     /* Footer */
     footer {
-      background: #0f172a;
-      color: #e2e8f0;
-      padding: 48px 0 32px;
-      margin-top: 20px;
-    }
-    .footer-content {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 40px;
-    }
-    .footer-logo {
-      font-size: 1.5rem;
-      font-weight: 800;
-      background: linear-gradient(135deg, #f97316, #facc15);
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
-    }
-    hr {
-      margin: 32px 0 24px;
-      border-color: #334155;
-    }
-    .copyright {
-      text-align: center;
-      font-size: 0.85rem;
-      opacity: 0.7;
+      background: #030303;
+      padding: 60px 0 30px;
     }
 
-    @media (max-width: 768px) {
-      .container { padding: 0 20px; }
-      .hero h1 { font-size: 2rem; }
-      .navbar { flex-direction: column; }
-      .fee-card { padding: 32px 24px; }
-      .contact-wrapper { padding: 32px 24px; }
-      .hero { flex-direction: column; text-align: center; }
-      .hero-buttons { justify-content: center; }
+    .footer-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 40px;
+      margin-bottom: 40px;
     }
+
+    .footer-col {
+      flex: 1;
+      min-width: 160px;
+    }
+
+    .footer-col .logo {
+      font-size: 1.8rem;
+      font-weight: 800;
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .footer-col p {
+      margin: 15px 0;
+      color: #aaa;
+    }
+
+    .footer-col h4 {
+      margin-bottom: 20px;
+      font-size: 1.2rem;
+      color: var(--orange);
+    }
+
+    .footer-col ul {
+      list-style: none;
+    }
+
+    .footer-col li {
+      margin-bottom: 12px;
+    }
+
+    .footer-col a:hover {
+      color: var(--orange);
+    }
+
+    .social-links a {
+      font-size: 1.5rem;
+      margin-right: 18px;
+      transition: color 0.2s;
+    }
+
+    .social-links a:hover {
+      color: var(--orange);
+    }
+
+    .copyright {
+      text-align: center;
+      padding-top: 30px;
+      border-top: 1px solid #222;
+      color: #777;
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 0.95rem;
+  }
+
+  .hero .subhead {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 480px) {
+  .btn-primary,
+  .btn-outline {
+    width: 100%;
+  }
+}
+@media (max-width: 480px) {
+  .service-card,
+  .course-card {
+    flex: 1 1 100%;
+  }
+}
+      .navbar {
+        flex-direction: column;
+        gap: 15px;
+      }
+      .nav-links {
+        gap: 1.2rem;
+      }
+      .section-title {
+        font-size: 2rem;
+      }
+/* Mobile Navbar Fix */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    text-align: center;
+  }
+}
   </style>
   <meta name="google-site-verification" content="72HdggYRkMUoC3-7bm-GwFZy70KcZfvAJPe95s3AySI" />
 </head>
 <body>
 
-<!-- Header -->
-<header class="header">
+<header>
   <div class="container">
     <div class="navbar">
-      <a href="index.html" class="logo-container" style="text-decoration: none;">
-        <div class="logo-img">M</div>
-        <div class="logo-text">MZR TECH</div>
-      </a>
+      <div class="logo">
+        <h2>MZR TECH</h2>
+      </div>
       <div class="nav-links">
-        <a href="index.html">Home</a>
+        <a href="#">Home</a>
         <a href="#about">About</a>
-        <a href="registration.html">Register</a>
+        <a href="service.html">Services</a>
         <a href="course.html">Courses</a>
+        <a href="registration.html">Contact</a>
       </div>
     </div>
   </div>
+  <div class="menu-toggle">☰</div>
 </header>
 
 <main>
   <!-- Hero Section -->
-  <section style="background: linear-gradient(110deg, #fff5ed 0%, #ffe8de 100%);">
+  <section class="hero" style="padding-top: 20px;">
     <div class="container">
-      <div class="hero">
-        <div class="hero-content">
-          <div class="hero-badge">🔥 Limited Seats — Apply Now</div>
-          <h1>Learn Skills That Make Money</h1>
-          <div class="hero-sub">Join MZR Tech – Admissions Open 20 April</div>
-          <div class="hero-buttons">
-            <a href="registration.html" class="btn-primary">🚀 Register Now</a>
-            <a href="course.html" class="btn-outline">📚 View Courses</a>
-          </div>
-          <div style="margin-top: 28px; display: flex; gap: 20px; font-size: 0.9rem; color: #b45309; flex-wrap: wrap;">
-            <span><i class="fas fa-check-circle"></i> 100% Practical</span>
-            <span><i class="fas fa-rocket"></i> Real Projects</span>
-            <span><i class="fas fa-certificate"></i> Certification</span>
-            <span><i class="fas fa-chalkboard-user"></i> Expert Trainers</span>
-          </div>
+      <h1>Your Vision, Our Innovation</h1>
+      <div class="subhead">Empowering Businesses with Smart Digital Solutions & Professional IT Education</div>
+      <p>At MZR Tech, we transform ideas into powerful digital experiences. From modern websites to result-driven marketing strategies, we help businesses grow and individuals build successful careers.</p>
+      <div class="hero-buttons">
+        <a href="service.html" class="btn-primary">🚀 Get Started</a>
+        <a href="#contact" class="btn-outline">📞 Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Introduction Section -->
+  <section>
+    <div class="container">
+      <div class="section-title">Driving Digital Excellence</div>
+      <div class="section-sub">MZR Tech is a forward-thinking digital solutions company dedicated to helping businesses establish a strong online presence.</div>
+      <div style="background: linear-gradient(145deg, #111111, #050505); border-radius: 32px; padding: 40px; text-align: center; max-width: 900px; margin: 0 auto;">
+        <p style="font-size: 1.15rem; color: #ddd;">We specialize in creating modern, responsive websites and delivering powerful digital marketing strategies that drive real results. Alongside services, we are committed to educating the next generation through professional IT courses designed for real-world success.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Us + Team -->
+  <section id="about">
+    <div class="container">
+      <div class="section-title">About MZR Tech</div>
+      <div class="about-grid">
+        <div class="about-card">
+          <h3>Our Mission</h3>
+          <p>MZR Tech is built on innovation, creativity, and a passion for technology. Our mission is to provide high-quality digital services and practical education that empowers individuals and businesses alike.</p>
         </div>
-        <div class="hero-image">
-          <svg viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="50" y="80" width="300" height="170" rx="28" fill="#F97316" fill-opacity="0.12" stroke="#F97316" stroke-width="1.5" stroke-dasharray="6 4"/>
-            <rect x="80" y="110" width="100" height="70" rx="16" fill="white" stroke="#DC2626" stroke-width="2"/>
-            <path d="M200 135 L260 135 L260 165 L200 165 Z" fill="#F97316" fill-opacity="0.3" stroke="#DC2626" stroke-width="1.5"/>
-            <circle cx="140" cy="155" r="14" fill="#F97316" stroke="white" stroke-width="3"/>
-            <path d="M310 160 L340 145 L340 175 Z" fill="#DC2626" fill-opacity="0.5"/>
-            <text x="90" y="250" font-size="12" fill="#B45309" font-weight="bold">📚 Expert-Led</text>
-            <text x="260" y="250" font-size="12" fill="#B45309">💻 Real Coding</text>
-            <path d="M70 270 L330 270" stroke="#F97316" stroke-width="2" stroke-dasharray="4"/>
-          </svg>
+        <div class="team-card">
+          <h3>👨‍💼 MZR Khan</h3>
+          <h4>Founder & CEO</h4>
+          <p>Visionary entrepreneur with expertise in web development and digital marketing. He leads MZR Tech with the goal of creating impactful solutions and helping others succeed in the digital world.</p>
+        </div>
+        <div class="team-card">
+          <h3>🤝 Ali Raza</h3>
+          <h4>Co-Founder</h4>
+          <p>Drives strategic direction & operational excellence, ensuring top-quality services and strong client relationships.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- About Section -->
-  <section id="about" style="padding: 60px 0;">
+  <!-- Silent Features (Why Choose Us) -->
+  <section style="background: #050505;">
     <div class="container">
-      <div style="background: white; border-radius: 48px; padding: 48px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center;">
-          <div>
-            <h2 style="font-size: 2rem; font-weight: 800; margin-bottom: 20px;">About <span style="color:#f97316;">MZR TECH</span></h2>
-            <p style="color: #4b5563; line-height: 1.6; margin-bottom: 16px;">MZR TECH is Pakistan's leading institute for high-income digital skills training. Founded with a vision to empower youth with practical, job-ready skills that actually generate income.</p>
-            <p style="color: #4b5563; line-height: 1.6;">We offer industry-aligned courses in <strong>Web Development, Digital Marketing, and Computer Sciences</strong> with a focus on real-world projects, freelancing guidance, and career placement support.</p>
-            <div style="display: flex; gap: 24px; margin-top: 24px; flex-wrap: wrap;">
-            </div>
-          </div>
-          <div style="background: linear-gradient(135deg, #f97316, #dc2626); border-radius: 32px; padding: 40px; text-align: center; color: white;">
-            <i class="fas fa-graduation-cap" style="font-size: 3rem; margin-bottom: 20px;"></i>
-            <h3 style="font-size: 1.5rem;">Your Success is Our Mission</h3>
-          </div>
-        </div>
+      <div class="section-title">Why Choose MZR Tech?</div>
+      <div class="features-grid">
+        <div class="feature-item"><i class="fas fa-palette"></i><h4>Professional & Modern Designs</h4><p>Pixel-perfect UI/UX</p></div>
+        <div class="feature-item"><i class="fas fa-chart-line"></i><h4>Result-Oriented Marketing</h4><p>Data-driven campaigns</p></div>
+        <div class="feature-item"><i class="fas fa-tags"></i><h4>Affordable Pricing</h4><p>For everyone, no hidden fees</p></div>
+        <div class="feature-item"><i class="fas fa-graduation-cap"></i><h4>Beginner to Advanced IT Courses</h4><p>Practical training</p></div>
+        <div class="feature-item"><i class="fas fa-smile"></i><h4>Client Satisfaction Priority</h4><p>We value your success</p></div>
+        <div class="feature-item"><i class="fas fa-rocket"></i><h4>Fast Delivery & Support</h4><p>24/7 assistance</p></div>
+        <div class="feature-item"><i class="fas fa-laptop-code"></i><h4>Real-World Training</h4><p>Hands-on projects</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services">
+    <div class="container">
+      <div class="section-title">Our Digital Services</div>
+      <div class="section-sub">At MZR Tech, we offer a complete range of digital services designed to take your business to the next level.</div>
+      <div class="cards-wrapper">
+        <div class="service-card"><i class="fab fa-wordpress"></i><h3>Web Development</h3><p>WordPress, custom-coded HTML/CSS/JS, modern & responsive websites.</p></div>
+        <div class="service-card"><i class="fas fa-chart-simple"></i><h3>Digital Marketing</h3><p>Facebook, Instagram, TikTok & Google Ads — high-converting campaigns.</p></div>
+        <div class="service-card"><i class="fas fa-lightbulb"></i><h3>Startup Guidance</h3><p>From idea to execution, build a strong digital foundation and grow.</p></div>
+      </div>
+      <div class="btn-cta">
+        <a href="service.html" class="btn-primary">👉 Explore Our Services</a>
       </div>
     </div>
   </section>
 
   <!-- Courses Section -->
-  <section id="courses" style="padding: 60px 0; background: #fefaf8;">
+  <section id="courses" style="background: #070707;">
     <div class="container">
-      <div class="section-title">🔥 Our <span>Premium Courses</span></div>
-      <div class="cards-grid">
-        
-        <!-- Course 1: Expert Computer Course -->
-        <div id="course-computer" class="course-card">
-          <div class="course-badge">⭐ Best for Beginners</div>
-          <div class="course-icon">🖥️</div>
-          <h3>Expert Computer Course</h3>
-          <p>Learn basic computer skills, MS Office, internet usage, typing, and essential digital knowledge for beginners.</p>
-          <ul class="curriculum-list">
-            <li>✓ MS Word, Excel, PowerPoint</li>
-            <li>✓ Internet & Email Essentials</li>
-            <li>✓ Basic IT & Troubleshooting</li>
-            <li>✓ Typing & Productivity Tools</li>
-          </ul>
-          <div class="price-tag" style="color:#f97316;">Rs. 3,000</div>
-          <div style="margin-top: 16px;">
-            <button class="btn-primary" style="padding: 8px 20px;" onclick="window.location.href='registration.html'">Enroll Now →</button>
-          </div>
-        </div>
-
-        <!-- Course 2: Digital Marketing -->
-        <div id="course-digital" class="course-card">
-          <div class="course-badge">🔥 High Demand</div>
-          <div class="course-icon">📈</div>
-          <h3>Digital Marketing</h3>
-          <p>Master social media marketing, SEO, freelancing, and online earning strategies to start your digital career.</p>
-          <ul class="curriculum-list">
-            <li>✓ Facebook & Instagram Ads</li>
-            <li>✓ Freelancing Basics (Fiverr/Upwork)</li>
-            <li>✓ Online Earning Methods</li>
-            <li>✓ SEO & Content Marketing</li>
-          </ul>
-          <div class="price-tag" style="color:#f97316;">Rs. 3,500</div>
-          <div style="margin-top: 16px;">
-            <button class="btn-primary" style="padding: 8px 20px;" onclick="window.location.href='registration.html'">Enroll Now →</button>
-          </div>
-        </div>
-
-        <!-- Course 3: Web Development -->
-        <div id="course-web" class="course-card">
-          <div class="course-badge">💻 Career Opportunity</div>
-          <div class="course-icon">🌐</div>
-          <h3>Web Development</h3>
-          <p>Build modern websites, learn coding, and create professional portfolio projects to start your freelancing journey.</p>
-          <ul class="curriculum-list">
-            <li>✓ HTML, CSS, JavaScript</li>
-            <li>✓ Website Building & Design</li>
-            <li>✓ Hosting & Domain Setup</li>
-            <li>✓ Portfolio Projects</li>
-          </ul>
-          <div class="price-tag" style="color:#f97316;">Rs. 3,500</div>
-          <div style="margin-top: 16px;">
-            <button class="btn-primary" style="padding: 8px 20px;" onclick="window.location.href='registration.html'">Enroll Now →</button>
-          </div>
-        </div>
+      <div class="section-title">Empower Your Career</div>
+      <div class="section-sub">We believe in empowering individuals with practical skills that open doors to success. Our courses are designed to help you learn, earn, and grow.</div>
+      <div class="cards-wrapper">
+        <div class="course-card"><i class="fas fa-laptop"></i><h3>💻 Expert Computer Course</h3><p>Complete IT essentials, MS Office, freelancing basics.</p></div>
+        <div class="course-card"><i class="fas fa-chart-line"></i><h3>📈 Digital Marketing Course</h3><p>SEO, social media ads, analytics, real-world campaigns.</p></div>
+        <div class="course-card"><i class="fas fa-code"></i><h3>🌐 Web Development</h3><p>HTML, CSS, JavaScript, modern frameworks, build real websites.</p></div>
+      </div>
+      <div class="btn-cta">
+        <a href="courses.html" class="btn-primary">👉 View Courses Details</a>
       </div>
     </div>
   </section>
 
-  <!-- Fee Section -->
-  <section style="background: #fffcf9; padding: 60px 0;">
+  <!-- Contact + Form (EmailJS Integrated) -->
+  <section id="contact">
     <div class="container">
-      <div class="fee-card">
-        <h2 style="font-size: 2rem; margin-bottom: 16px; color:white;">💰 Affordable & Transparent</h2>
-        <div class="fee-row"><span>📌 Registration Fee</span><span class="fee-amount">Rs. 500</span></div>
-        <div class="fee-row"><span>📌 Course Fee (One-time)</span><span class="fee-amount" style="font-size: 1.6rem;">Starting from Rs. 3,000</span></div>
-        <div style="border-top: 1px solid #ffcdb3; margin: 16px 0;"></div>
-        <div class="limited">⚠️ Limited seats available — first come first serve</div>
-        <button class="btn-primary" style="margin-top: 28px;" onclick="window.location.href='registration.html'">Reserve Your Seat →</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- Why Choose Us -->
-  <section style="padding: 60px 0;">
-    <div class="container">
-      <div class="section-title">⭐ Why <span>Choose MZR TECH</span></div>
-      <div class="features-grid">
-        <div class="feature-item"><div class="feature-icon">🛠️</div><h4>Practical Training</h4><p>Live projects, real-world case studies</p></div>
-        <div class="feature-item"><div class="feature-icon">🚀</div><h4>Real Projects</h4><p>Build portfolio while learning</p></div>
-        <div class="feature-item"><div class="feature-icon">🧑‍🎓</div><h4>Beginner Friendly</h4><p>No prior experience needed</p></div>
-        <div class="feature-item"><div class="feature-icon">💼</div><h4>Freelancing Guidance</h4><p>Upwork, Fiverr strategies</p></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CEO Section -->
-  <section style="padding: 0 0 60px 0;">
-    <div class="container">
-      <div style="background: linear-gradient(135deg, #fff5ed, #ffe8de); border-radius: 48px; padding: 48px;">
-        <div style="display: grid; grid-template-columns: auto 1fr; gap: 40px; align-items: center;">
-          <div style="width: 120px; height: 120px; background: linear-gradient(135deg, #f97316, #dc2626); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 3.5rem;"></div>
-          <div>
-            <div style="font-size: 1.2rem; font-style: italic; color: #374151;">"Our mission is to transform passionate learners into high-income earners. At MZR TECH, we don't just teach skills — we build careers."</div>
-            <div style="font-size: 1.5rem; font-weight: 800; color: #f97316; margin-top: 16px;">M.Z.R. Khan</div>
-            <div style="color: #6b7280;">Founder & CEO, MZR TECH</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- How It Works -->
-  <section style="background: linear-gradient(to right, #fff7f0, #fff2ea); padding: 60px 0;">
-    <div class="container">
-      <div class="section-title">📌 How It Works — <span>4 Simple Steps</span></div>
-      <div class="steps">
-        <div class="step"><div class="step-num">1</div><h3>Register</h3><p>Fill quick form</p></div>
-        <div class="step"><div class="step-num">2</div><h3>Pay Fee</h3><p>Rs.500 registration</p></div>
-        <div class="step"><div class="step-num">3</div><h3>Get Approval</h3><p>Confirmation via WhatsApp</p></div>
-        <div class="step"><div class="step-num">4</div><h3>Start Learning</h3><p>Access classes</p></div>
-      </div>
-      <div style="text-align: center; margin-top: 48px;">
-        <button class="btn-primary" onclick="window.location.href='registration.html'">🚀 Start Your Journey →</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" style="padding: 60px 0;">
-    <div class="container">
-      <div class="section-title">📞 Get in <span>Touch</span></div>
-      <div class="contact-wrapper">
+      <div class="section-title">Let's Connect</div>
+      <div class="contact-grid">
         <div class="contact-info">
-          <p><i class="fas fa-phone"></i> <strong>Phone:</strong> +92 324 9375759</p>
-          <p><i class="fas fa-map-marker-alt"></i> <strong>Location:</strong>Shalimar Town Lahore</p>
-          <a href="https://wa.me/923249375759?text=Hello%20MZR%20TECH%2C%20I%20want%20to%20enroll" target="_blank" class="whatsapp-btn"><i class="fab fa-whatsapp"></i> WhatsApp Now →</a>
+          <h3 style="font-size: 1.8rem; color:var(--orange); margin-bottom: 20px;">Reach Out</h3>
+          <p><i class="fab fa-whatsapp"></i> <strong>WhatsApp:</strong> +92 324 9375759</p>
+          <p><i class="fas fa-envelope"></i> <strong>Email:</strong> mzrhuboffical@gmail.com</p>
+          <p><i class="fas fa-clock"></i> Support available 24/7 for inquiries.</p>
         </div>
-        <div style="background: white; border-radius: 32px; padding: 20px 28px; min-width: 220px;">
-          <h4 style="margin-bottom: 16px;">📢 Quick Inquiry</h4>
-          <input type="text" id="inquiryName" placeholder="Your Name" style="width:100%; padding:12px; border-radius:60px; border:1px solid #f3cfbf; margin-bottom:12px;">
-          <input type="tel" id="inquiryPhone" placeholder="Phone number" style="width:100%; padding:12px; border-radius:60px; border:1px solid #f3cfbf; margin-bottom:12px;">
-          <button class="btn-primary" style="width:100%;" onclick="alert('Thank you! Our team will contact you soon.')">Request Callback</button>
+        <div class="contact-form">
+          <h3 style="margin-bottom: 20px;">Send us a message</h3>
+          <form id="contact-form">
+            <input type="text" name="user_name" placeholder="Your Name" required>
+            <input type="text" name="user_contact" placeholder="Contact Number" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+          </form>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA Section -->
-  <section style="background: linear-gradient(115deg, #f97316, #dc2626); color: white; padding: 60px 0; border-radius: 60px 60px 0 0;">
-    <div class="container" style="text-align: center;">
-      <h2 style="font-size: 2rem; font-weight: 800;">🎓 Become a High-Income Skill Professional</h2>
-      <p style="font-size: 1.1rem; margin: 20px 0;">Limited seats for April batch — Don't miss the opportunity</p>
-      <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
-        <a href="registration.html" class="btn-primary" style="background: white; color:#f97316;">🔴 Register Now — Rs.500 only</a>
-        <a href="course.html" class="btn-outline" style="background: transparent; border-color: white; color: white;">⚫ Courses</a>
       </div>
     </div>
   </section>
@@ -720,8 +656,82 @@
 <!-- Footer -->
 <footer>
   <div class="container">
-    <div class="footer-content">
-      <div><div class="footer-logo">MZR TECH</div><p style="margin-top: 12px;">Pakistan's leading institute for high-income digital skills.</p></div>
-      <div><h4 style="color:white;">Quick Links</h4><ul style="list-style: none; margin-top: 12px;"><li><a href="index.html" style="color:#cbd5e1;">Home</a></li><li><a href="#courses" style="color:#cbd5e1;">Courses</a></li><li><a href="registration.html" style="color:#cbd5e1;">Register</a></li></ul></div>
-      <div><h4 style="color:white;">Contact</h4><p>📞 +92 324 9375759</p><p>📧 mzrhuboffical@gmail.com</p></div>
-    </div
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="logo">MZR TECH</div>
+        <p>Your Vision, Our Innovation</p>
+        <p>Empowering digital growth & IT education in Pakistan.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="registration.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact Info</h4>
+        <p><i class="fab fa-whatsapp"></i> +92 324 9375759</p>
+        <p><i class="fas fa-envelope"></i> mzrhuboffical@gmail.com</p>
+      </div>
+      <div class="footer-col">
+        <h4>Follow Us</h4>
+        <div class="social-links">
+          <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-tiktok"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      © 2025 MZR Tech — All rights reserved. Built with innovation & passion.
+    </div>
+  </div>
+</footer>
+
+<!-- EmailJS Script Integration -->
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+  (function() {
+    // Initialize EmailJS with your public key
+    emailjs.init("PyqTlXPUSAPVhlrAT");
+  })();
+
+  const form = document.getElementById("contact-form");
+  if (form) {
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      // Get form fields
+      const userName = form.querySelector("input[name='user_name']").value;
+      const userContact = form.querySelector("input[name='user_contact']").value;
+      const userMessage = form.querySelector("textarea[name='message']").value;
+
+      emailjs.send("service_53jbhki", "template_pw4nny6", {
+        user_name: userName,
+        user_contact: userContact,
+        message: userMessage
+      }).then(function(response) {
+        alert("✅ Message Sent Successfully! We'll get back to you soon.");
+        form.reset();
+      }, function(error) {
+        console.error("EmailJS error:", error);
+        alert("❌ Failed to send message. Please try again or contact via WhatsApp.");
+      });
+    });
+  }
+</script>
+<script>
+  const toggle = document.querySelector(".menu-toggle");
+  const nav = document.querySelector(".nav-links");
+
+  toggle.addEventListener("click", () => {
+    nav.classList.toggle("active");
+  });
+</script>
+</body>
+</html>
