@@ -210,6 +210,13 @@
       border-color: var(--orange);
     }
 
+    input[readonly] {
+      background: #2a2a2a;
+      border-color: var(--orange);
+      color: #facc15;
+      font-weight: 600;
+    }
+
     .checkbox-group {
       display: flex;
       flex-wrap: wrap;
@@ -400,10 +407,11 @@
     <div class="navbar">
       <div class="logo"><h2>MZR TECH</h2></div>
       <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="service.html">Services</a>
-        <a href="course.html">Courses</a>
-        <a href="registration.html">Contact</a>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Courses</a>
+        <a href="#">Contact</a>
       </div>
     </div>
   </div>
@@ -444,7 +452,7 @@
           <h3 style="margin-bottom: 25px; color: var(--orange);"><i class="fas fa-graduation-cap"></i> Academic & Tech Access</h3>
           <div class="form-group">
             <label>Maximum Education</label>
-            <select name="education" required>
+            <select name="education" id="educationSelect" required>
               <option value="Matric">Matric</option>
               <option value="Intermediate">Intermediate</option>
               <option value="Undergraduate">Undergraduate</option>
@@ -486,7 +494,10 @@
           </div>
           <div class="form-group">
             <label>Payment Type</label>
-            <select name="payment_type" required><option>Half Payment</option><option>Full Payment</option></select>
+            <select name="payment_type" id="paymentTypeSelect" required>
+              <option>Half Payment</option>
+              <option>Full Payment</option>
+            </select>
           </div>
           <div class="form-group">
             <label>Learning Mode</label>
@@ -495,6 +506,13 @@
               <option value="Physical">Physical (Prism Academy, Shalamar Town, Lahore)</option>
             </select>
           </div>
+          
+          <!-- ✅ FEE DISPLAY FIELD (LIVE CALCULATION) -->
+          <div class="form-group">
+            <label>💰 Calculated Fee</label>
+            <input type="text" id="feeDisplay" readonly placeholder="Fee will be calculated automatically" style="font-weight: bold; color: #facc15;">
+          </div>
+          
           <div class="btn-group">
             <button type="button" class="btn-prev" onclick="prevStep(2)">← Back</button>
             <button type="submit" class="btn-submit">✅ Submit Registration</button>
@@ -529,10 +547,11 @@
       <div class="footer-col">
         <h4>Quick Links</h4>
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="courses.html">Courses</a></li>
-          <li><a href="registration.html">Contact</a></li>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Courses</a></li>
+          <li><a href="#">Contact</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -559,6 +578,66 @@
     publicKey: "PyqTlXPUSAPVhlrAT",
   });
 
+  // ==================== FEE CALCULATION SYSTEM (UPDATED) ====================
+  function calculateFee() {
+    let education = document.querySelector('select[name="education"]')?.value || "Matric";
+    let mode = document.getElementById('learningMode')?.value || "Online";
+    let paymentType = document.querySelector('select[name="payment_type"]')?.value || "Full Payment";
+
+    let baseFee = 12000;
+
+    // 🎓 Education discount: Matric = 10000, others remain 12000
+    if (education === "Matric") {
+      baseFee = 10000;
+    }
+
+    // 🌐 Mode adjustment
+    if (mode === "Online") {
+      baseFee = 8000;
+    } else if (mode === "Physical") {
+      baseFee = baseFee; // Keep as calculated (10000 or 12000)
+    }
+
+    // Hybrid case (if later needed, both online+physical)
+    if (mode === "Both") {
+      baseFee = 12000;
+    }
+
+    // ➕ Registration Fee (+500)
+    let totalFee = baseFee + 500;
+
+    // 💳 Payment type - calculate payable now
+    let payableNow = totalFee;
+    if (paymentType === "Half Payment") {
+      payableNow = totalFee / 2;
+    }
+
+    return {
+      totalFee: totalFee,
+      payableNow: payableNow
+    };
+  }
+
+  // ✅ LIVE FEE DISPLAY UPDATE
+  function updateFeeDisplay() {
+    let fee = calculateFee();
+    let feeInput = document.getElementById('feeDisplay');
+    if (feeInput) {
+      feeInput.value = `Total Fee: Rs. ${fee.totalFee} | Pay Now: Rs. ${fee.payableNow}`;
+    }
+  }
+
+  // Attach event listeners to all select elements that affect fee
+  function attachFeeListeners() {
+    const selects = ['educationSelect', 'learningMode', 'paymentTypeSelect'];
+    selects.forEach(id => {
+      const el = document.getElementById(id);
+      if (el) {
+        el.addEventListener('change', updateFeeDisplay);
+      }
+    });
+  }
+
   // Multi-step navigation
   let currentStep = 1;
   const steps = document.querySelectorAll('.form-step');
@@ -572,10 +651,13 @@
       if(idx+1 < currentStep) label.classList.add('completed');
       else label.classList.remove('completed');
     });
+    // When moving to step 3, update fee display
+    if (currentStep === 3) {
+      updateFeeDisplay();
+    }
   }
 
   window.nextStep = function(step) {
-    // Validation for step1 and step2
     if(currentStep === 1) {
       let name = document.querySelector('input[name="student_name"]').value;
       let father = document.querySelector('input[name="father_name"]').value;
@@ -604,7 +686,6 @@
     let knowledge = computerSelect.value;
     const computerCourseCheck = document.querySelector('input[value="Computer"]');
     if(knowledge === "No") {
-      // Only allow Expert Computer Course, uncheck others and disable
       courseCheckboxes.forEach(cb => {
         if(cb.value !== "Computer") {
           cb.checked = false;
@@ -620,7 +701,7 @@
   }
   
   computerSelect.addEventListener('change', applyCourseRestriction);
-  applyCourseRestriction(); // initial run
+  applyCourseRestriction();
 
   // Max 2 courses validation
   function enforceMaxCourses() {
@@ -633,19 +714,6 @@
     }
   }
   courseCheckboxes.forEach(cb => cb.addEventListener('change', enforceMaxCourses));
-
-  // FEE CALCULATION FUNCTION
-  function calculateFee(coursesArray, mode) {
-    let total = 0;
-    coursesArray.forEach(c => {
-      if(c === "Computer") total += 9000;
-      if(c === "Digital Marketing") total += 10000;
-      if(c === "Web Development") total += 10000;
-    });
-    if(mode === "Online") total -= 500;
-    if(mode === "Physical" && coursesArray.length > 1) total += 500;
-    return total;
-  }
 
   // Check if email already registered (localStorage)
   function isDuplicateEmail(email) {
@@ -661,12 +729,15 @@
     }
   }
 
-  // FORM SUBMIT with EmailJS v4 + Fee Alert + WhatsApp
+  // Initialize fee listeners and display
+  attachFeeListeners();
+  updateFeeDisplay();
+
+  // FORM SUBMIT with EmailJS v4 + updated fee data
   const form = document.getElementById('registration-form');
   form.addEventListener('submit', function(e) {
     e.preventDefault();
     
-    // Validate courses selected (max 2 and at least 1)
     let selectedCourses = Array.from(courseCheckboxes).filter(cb => cb.checked && !cb.disabled).map(cb => cb.value);
     if(selectedCourses.length === 0) {
       alert("Please select at least one course.");
@@ -677,7 +748,6 @@
       return;
     }
     
-    // Restriction double-check: if computer knowledge is No and any non-computer course selected -> reject
     let knowledgeVal = computerSelect.value;
     if(knowledgeVal === "No") {
       if(selectedCourses.some(c => c !== "Computer")) {
@@ -692,14 +762,12 @@
       return;
     }
     
-    // Calculate fee
-    const mode = form.mode.value;
-    let totalFee = calculateFee(selectedCourses, mode);
-    
-    // Prepare course string
     let courseStr = selectedCourses.join(", ");
     
-    // Send via EmailJS v4 (updated method - works with new SDK)
+    // ✅ Get updated fee data
+    let feeData = calculateFee();
+    
+    // Send via EmailJS v4 with correct variables
     emailjs.send("service_53jbhki", "template_rivmehi", {
       student_name: form.student_name.value,
       father_name: form.father_name.value,
@@ -709,23 +777,22 @@
       computer_knowledge: form.computer_knowledge.value,
       internet: form.internet.value,
       laptop: form.laptop.value,
-      course: form.courses.value,
+      course: courseStr,  // ✅ FIXED: using courseStr instead of courses.value
       payment_type: form.payment_type.value,
-      mode: form.mode.value
+      mode: form.mode.value,
+      total_fee: feeData.total_fee,
+      payable_now: feeData.payable_now
     }).then(function(response) {
-      // Success: Save to localStorage to prevent duplicate
       saveRegistration(email);
       
-      // Show fee details + payment instructions
-      alert(`✅ Registration Submitted Successfully!\n\n📌 Selected Courses: ${courseStr}\n💰 Total Fee: Rs. ${totalFee}\n\n💳 Payment Methods:\nNayaPay: 03249375759 (MZR Khan)\nJazzCash: 0307 5784260 (Ali Raza)\nEasypaisa: 03136178854 (Saif Ur Rehman)\n\n📲 After payment, send screenshot on WhatsApp: +92 324 9375759\n\nBatch starts 15 May. Welcome to MZR Tech!`);
-      
-      // Reset form and reset steps
+       // ✅ UPDATED SUCCESS ALERT WITH FEE DETAILS
+      alert(`✅ Registration Submitted Successfully!\n\n📌 Courses: ${courseStr}\n💰 Total Fee: Rs. ${feeData.total_fee}\n💳 Pay Now: Rs. ${feeData.payable_now}\n\n💳 Payment Methods:\nNayaPay: 03249375759 (MZR Khan)\nJazzCash: 0307 5784260 (Ali Raza)\nEasypaisa: 03136178854 (Saif Ur Rehman)\n\n📲 Send screenshot on WhatsApp: +92 324 9375759\n\nBatch starts 15 May 🚀`);
       form.reset();
-      // reset checkboxes disabling
       courseCheckboxes.forEach(cb => cb.disabled = false);
       applyCourseRestriction();
       currentStep = 1;
       updateProgress();
+      updateFeeDisplay();
       
     }).catch(function(error) {
       console.error("EmailJS Error:", error);
